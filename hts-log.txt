@@ -1,0 +1,27 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 17 Feb 2025 22:08:38 at https://kindflow-template.webflow.io/home https:////kindflow-template.webflow.io/about +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://kindflow-template.webflow.io/home https:////kindflow-template.webflow.io/about -O1 "E:\suyanV1\suyan" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:09:03	Error: 	"Bad Request" (400) at link https:////kindflow-template.webflow.io/about (from primary/primary)
+22:09:23	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/causes-category/education (from https://kindflow-template.webflow.io/home)
+22:09:30	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/blog-category/innovation (from https://kindflow-template.webflow.io/home)
+22:09:30	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/template-info/changelog (from https://kindflow-template.webflow.io/home)
+22:09:38	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/causes-category/education (from https://kindflow-template.webflow.io/home)
+22:09:38	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/blog-category/innovation (from https://kindflow-template.webflow.io/home)
+22:09:38	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/template-info/changelog (from https://kindflow-template.webflow.io/home)
+22:09:40	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/events?dbb80c4c_page=1 (from https://kindflow-template.webflow.io/events?dbb80c4c_page=2)
+22:09:40	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/causes-member/kevin-brooks (from https://kindflow-template.webflow.io/causes/offering-scholarships-to-deserving-students)
+22:09:40	Error: 	"Bad Gateway" (502) after 2 retries at link https://kindflow-template.webflow.io/causes-category/education (from https://kindflow-template.webflow.io/home)
+22:09:40	Error: 	"Bad Gateway" (502) after 2 retries at link https://kindflow-template.webflow.io/blog-category/innovation (from https://kindflow-template.webflow.io/home)
+22:09:40	Error: 	"Bad Gateway" (502) after 2 retries at link https://kindflow-template.webflow.io/template-info/changelog (from https://kindflow-template.webflow.io/home)
+22:09:40	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/events?dbb80c4c_page=1 (from https://kindflow-template.webflow.io/events?dbb80c4c_page=2)
+22:09:40	Warning: 	Retry after error 502 (Bad Gateway) at link https://kindflow-template.webflow.io/causes-member/kevin-brooks (from https://kindflow-template.webflow.io/causes/offering-scholarships-to-deserving-students)
+22:09:41	Error: 	"Bad Gateway" (502) after 2 retries at link https://kindflow-template.webflow.io/events?dbb80c4c_page=1 (from https://kindflow-template.webflow.io/events?dbb80c4c_page=2)
+22:09:41	Error: 	"Bad Gateway" (502) after 2 retries at link https://kindflow-template.webflow.io/causes-member/kevin-brooks (from https://kindflow-template.webflow.io/causes/offering-scholarships-to-deserving-students)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 minutes 3 seconds : 149 links scanned, 131 files written (9477551 bytes overall) [8207142 bytes received at 130272 bytes/sec], 1915376 bytes transferred using HTTP compression in 51 files, ratio 23%, 5.9 requests per connection
+(6 errors, 10 warnings, 0 messages)
