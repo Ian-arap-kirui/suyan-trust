@@ -2712,7 +2712,7 @@ figure {
 .banner-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 48px;
+  font-size: 44px;
 }
 
 .style-guide-section {
@@ -4602,11 +4602,15 @@ figure {
   margin-top: 100px;
   display: flex;
 }
-
 .mission-content-wrap {
   flex: 1;
   max-width: 50%;
+  display: flex;
+flex-direction: column;
 }
+  .mission-title-top{
+    
+  }
 
 .mission-title-wrap {
   margin-bottom: 20px;
@@ -7365,7 +7369,7 @@ figure {
 }
 
 .splash-banner-title {
-  font-size: 56px;
+  font-size: 52px;
 }
 
 .splash-feature-bg-wrap {
@@ -7909,7 +7913,7 @@ figure {
   }
 
   .banner-title {
-    font-size: 54px;
+    font-size: 50px;
   }
 
   .style-guide-section.color-swatch {
@@ -8514,7 +8518,7 @@ figure {
   }
 
   .splash-banner-title {
-    font-size: 60px;
+    font-size: 56px;
   }
 }
 
@@ -8533,7 +8537,7 @@ figure {
   }
 
   .banner-title {
-    font-size: 60px;
+    font-size: 56px;
   }
 
   .style-guide-area.button-bottom-area {
@@ -8811,7 +8815,7 @@ figure {
   }
 
   .banner-title {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .style-guide-section {
@@ -9968,7 +9972,7 @@ figure {
   }
 
   .splash-banner-title {
-    font-size: 46px;
+    font-size: 44px;
   }
 
   .splash-social-asset-grid {
@@ -10109,7 +10113,7 @@ figure {
   }
 
   .banner-title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .style-guide-section {
@@ -11464,7 +11468,7 @@ figure {
   }
 
   .splash-banner-title {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .splash-feature-bg-wrap {
@@ -11694,7 +11698,7 @@ figure {
   }
 
   .banner-title {
-    font-size: 30px;
+    font-size: 26px;
   }
 
   .style-guide-area {
@@ -12984,7 +12988,7 @@ figure {
   }
 
   .splash-banner-title {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .splash-feature-bg-wrap {
