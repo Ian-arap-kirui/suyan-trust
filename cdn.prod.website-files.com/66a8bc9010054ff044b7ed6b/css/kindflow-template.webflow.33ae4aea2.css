@@ -2173,9 +2173,9 @@ textarea.w-select {
   --font--heading: Nunito, sans-serif;
   --color--heading-color: #122f2a;
   --color--white: white;
-  --color--secondary-color: #ffa415;
+  --color--secondary-color: #0ab162;
   --color--transparent: transparent;
-  --color--primary-color: #ff5528;
+  --color--primary-color: #8e6b51;
   --bg-color--light-bg-color: #f6f3ee;
   --font--subtitle: Caveat, sans-serif;
   --bg-color--light-blue-bg-color: #f1f6f7;
@@ -7887,7 +7887,7 @@ flex-direction: column;
   }
 
   .brand-link {
-    max-width: none;
+    max-width: 250px;
   }
 
   .banner-area {
