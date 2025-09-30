@@ -10,7 +10,8 @@
   <head>
     <meta charset="utf-8" />
     <!-- Meta Title -->
-<title>Kirisia Community Forest Association | Kirisia CFA</title>
+<title>Kirisia Community Forest Association | Samburu Conservation & Restoration</title>
+<meta name="description" content="Kirisia Community Forest Association (KCFA) leads conservation of Kirisia Forest in Samburu, Kenya. Learn about biodiversity, community efforts, and eco-tourism opportunities.">
 
 <!-- Meta Description -->
 <meta name="description" content="Join Kirisia Community Forest Association in protecting, restoring, and sustainably managing Kirisia Forest. Support reforestation, biodiversity conservation, and eco-friendly livelihoods for a greener future. Get involved today!"/>
@@ -92,6 +93,25 @@
       href="./kirisia-images/kirisia-cfa-favicon.svg"
       rel="apple-touch-icon"
     />
+    <link rel="preload" as="image" href="/kirisia-images/hero-kcfa.png"
+      imagesrcset="/kirisia-images/hero-kcfa-1200w.jpg 1200w, /kirisia-images/hero-kcfa-800w.jpg 800w"
+      imagesizes="100vw">
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "NGO",
+          "name": "Kirisia Community Forest Association",
+          "url": "https://kirisiacfa",
+          "logo": "https://kirisiacfa.org/kirisia-images/kirisia-cfa-logo-v2.svg",
+          "sameAs": [
+            "https://www.facebook.com/",
+            "https://www.linkedin.com/"
+          ],
+          "description": "Kirisia Community Forest Association (KCFA) is a community-led conservation initiative in Samburu County, Kenya, working to restore biodiversity, protect wildlife, and empower local communities."
+        }
+</script>
+
   </head>
   <body>
     <div class="hero-whole-area">
@@ -227,7 +247,7 @@
           <div class="container w-container">
             <div class="header-area">
               <a
-                href="index.html"
+                href="/"
                 aria-current="page"
                 class="brand-link w-nav-brand w--current"
               >
@@ -242,13 +262,33 @@
               <nav role="navigation" class="nav-menu w-nav-menu" >
                 <div class="nav-bar-wrap">
                   <a
-                    href="index.html"
+                    href="/"
                     aria-current="page"
                     class="nav-menu-link w-nav-link w--current"
                     >Home</a
-                  ><a href="about-2.html" class="nav-menu-link w-nav-link"
-                    >About</a
-                    ><a href="causes.html" class="nav-menu-link w-nav-link"
+                  ><div
+                    data-hover="true"
+                    data-delay="0"
+                    class="nav-dropdown w-dropdown"
+                  >
+                    <div class="nav-menu-link w-dropdown-toggle">
+                      <div>About</div>
+                      <div
+                        class="nav-dropdown-icon w-icon-dropdown-toggle"
+                      ></div>
+                    </div>
+                    <nav class="nav-dropdown-list w-dropdown-list">
+                      <a
+                        href="Kirisia-Forest.html"
+                        class="nav-dropdown-link w-dropdown-link"
+                        >Kirisia Forest</a
+                      ><a
+                        href="about-2.html"
+                        class="nav-dropdown-link w-dropdown-link"
+                        >Kirisia CFA</a
+                      >
+                    </nav>
+                  </div><a href="causes.html" class="nav-menu-link w-nav-link"
                     >Causes</a
                     >
                     <a href="events.html" class="nav-menu-link w-nav-link"
@@ -258,37 +298,7 @@
                       >Our Team</a>
                  <a href="gallery.html" class="nav-menu-link w-nav-link"
                       >Gallery</a>     
-                  <!-- <div
-                    data-hover="true"
-                    data-delay="0"
-                    class="nav-dropdown w-dropdown"
-                  >
-                    <div class="nav-menu-link w-dropdown-toggle">
-                      <div>Pages</div>
-                      <div
-                        class="nav-dropdown-icon w-icon-dropdown-toggle"
-                      ></div>
-                    </div>
-                    <nav class="nav-dropdown-list w-dropdown-list">
-                      <a
-                        href="fundraise.html"
-                        class="nav-dropdown-link w-dropdown-link"
-                        >Fundraise</a
-                      ><a
-                        href="donation.html"
-                        class="nav-dropdown-link w-dropdown-link"
-                        >Donation</a
-                      ><a
-                        href="our-team.html"
-                        class="nav-dropdown-link w-dropdown-link"
-                        >Volunteers</a
-                      ><a
-                        href="blog.html"
-                        class="nav-dropdown-link w-dropdown-link"
-                        >Blog</a
-                      >
-                    </nav>
-                  </div> -->
+                  
                 
                 </div>
                 <div class="nav-button-wrap">
@@ -312,36 +322,37 @@
               style="opacity: 0"
               class="hero-wrap"
             >
-              <p class="hero-subtitle">Help make a difference</p>
+               
               <h1 class="hero-title">
-                Protecting & Restoring
-                <span class="hero-title-subtext">Kirisia </span
-                ><span class="hero-title-subtext">Forest</span> for Future
-                Generations
+                Kirisia Community Forest Association (KCFA) — Protecting Kirisia Forest, Samburu County
               </h1>
               <div class="hero-content-wrap">
                 <p class="hero-content">
-                  THE
-                  <span class="hero-title-subtext" style="text-decoration: none"
-                    >KIRISIA COMMUNITY FOREST ASSOCIATION </span
-                  >- K-CFA
+                 A community-led conservation initiative restoring biodiversity, safeguarding water sources and creating eco-friendly livelihoods across the Kirisia hills of Samburu, Kenya.
                 </p>
               </div>
               <div class="hero-button-wrap">
-                <a href="about-2.html" class="secondary-button pd-35 w-button"
-                  >Explore Kirisia 🌳 CFA!</a
+                <a href="Kirisia-Forest.html" class="secondary-button pd-35 w-button"
+                  >Explore Kirisia Forest</a
                 >
               </div>
             </div>
-            <div class="hero-image-wrap">
-              <img
-                src="/kirisia-images/hero-kcfa.png"
-                loading="eager"
-                sizes="(max-width: 479px) 92vw, (max-width: 767px) 85vw, (max-width: 991px) 77vw, 100vw"
-                alt="banner bg"
-                class="hero-image"
-              />
-            </div>
+            <div class="hero-image-wrap" aria-hidden="true">
+        <picture>
+          <!-- replace these files with optimized versions (1200/800/480) -->
+          <source srcset="/kirisia-images/hero-kcfa-1200w.jpg 1200w, /kirisia-images/hero-kcfa-800w.jpg 800w, /kirisia-images/hero-kcfa-480w.jpg 480w"
+                  sizes="(max-width: 479px) 92vw, (max-width: 767px) 85vw, (max-width: 991px) 77vw, 100vw" />
+          <img
+            src="/kirisia-images/hero-kcfa.png"
+            alt="Aerial view of Kirisia Forest, Samburu County, Kenya — community reforestation and patrols"
+            class="hero-image"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            width="1200"
+            height="700" />
+        </picture>
+      </div>
           </div>
         </div>
         <div class="hero-section-area"><div class="hero-bg-area"></div></div>
@@ -434,9 +445,9 @@
             style="opacity: 0"
             class="service-title-wrap"
           >
-            <p class="banner-subtitle">Our Key Areas of Focus</p>
-            <h2 class="section-title">
-              Empowering Communities, Protecting Nature
+            <p class="banner-subtitle">Our Conservation Focus Areas</p>
+            <h2 class="service-title">
+              The Kirisia Community Forest Association (KCFA) works across multiple fronts to restore, protect and sustain the Kirisia Forest ecosystem in Samburu County.
             </h2>
           </div>
           <div class="service-card-area">
@@ -452,11 +463,11 @@
                 </div>
               </div>
               <div class="service-card-content-wrap">
-                <h3 class="service-card-title">Sustainable Livelihoods & Funding</h3>
+                <h3 class="service-card-title">Biodiversity Protection</h3>
                 <p class="service-card-content">
-                  Supporting eco-friendly income activities like beekeeping, eco-tourism, and agroforestry.
-                </p>
-              </div>
+                  Safeguarding wildlife, rare bird species, and natural habitats through patrols, monitoring, and habitat restoration.</p>
+              <a href="/Kirisia-Forest.html" class="learn-more" aria-label="Learn more about biodiversity in Kirisia Forest">Learn More →</a>
+                </div>
             </div>
             <div class="service-card" style="background-color: #f1f6f7;">
               <div class="service-card-icon-wrap card-two">
@@ -470,10 +481,11 @@
                 </div>
               </div>
               <div class="service-card-content-wrap">
-                <h3 class="service-card-title"> capacity building</h3>
+                <h3 class="service-card-title">Community Empowerment</h3>
                 <p class="service-card-content">
-                  Building the capacity of KCFA and community user groups to lead, manage, and safeguard the Kirisia Forest.
+                  Strengthening local communities through education, capacity building, and participatory forest management.
                 </p>
+                <a href="/about-2.html" class="learn-more" aria-label="Read about KCFA community empowerment programs">Read More →</a>
               </div>
             </div>
             <div class="service-card" style="background-color: #f1f6f7;">
@@ -488,10 +500,11 @@
                 </div>
               </div>
               <div class="service-card-content-wrap">
-                <h3 class="service-card-title"> Education & Environmental Awareness</h3>
-                <p class="service-card-content">
-                  Training local communities on forest conservation and sustainable resource use.
-                </p>
+                <h3 class="service-card-title">Sustainable Livelihoods</h3>
+                <p class="service-desc">
+            Promoting eco-friendly income sources such as beekeeping, tree nurseries, and agroforestry to reduce forest pressure.
+          </p>
+          <a href="/causes.html" class="learn-more" aria-label="Explore KCFA sustainable livelihood projects">Explore Projects →</a>
               </div>
             </div>
             <div class="service-card" style="background-color: #f1f6f7;">
@@ -506,10 +519,11 @@
                 </div>
               </div>
               <div class="service-card-content-wrap">
-                <h3 class="service-card-title"> Community Support</h3>
-                <p class="service-card-content">
-                  Training local communities on forest conservation and sustainable resource use.
-                </p>
+                <h3 class="service-card-title">Forest Restoration & Climate Action</h3>
+                <p class="service-desc">
+            Leading large-scale tree planting, reforestation, and climate resilience efforts to restore Samburu’s vital water tower.
+          </p>
+          <a href="/events.html" class="learn-more" aria-label="See KCFA forest restoration and climate action achievements">See Achievements →</a>
               </div>
             </div>
           </div>
@@ -552,8 +566,11 @@
               </h2>
             </div>
             <p class="about-content">
-              Kirisia CFA is a dedicated Community Forest Association (CFA) working to protect, restore, and sustainably manage Kirisia Forest. By engaging local communities, we promote biodiversity conservation, climate resilience, and eco-friendly livelihoods.
-            <!-- <div class="about-feature-list-wrap">
+              Kirisia Community Forest Association (KCFA) is a community-led organization formed in 2019 working with Kenya Forest Service (KFS), FAO and local partners to restore the Kirisia water tower, protect biodiversity and create sustainable livelihoods for Samburu communities. Our work includes large-scale tree planting, fire management, community rangers, and alternative livelihood projects such as beekeeping and agroforestry.
+            </p>
+              <div class="about-line-break"></div>
+          <strong>Key wins:</strong> voluntary relocation of settlers, mass tree-planting campaigns, Important Bird Area (IBA) recognition and strengthened community governance.
+              <!-- <div class="about-feature-list-wrap">
               <div class="about-feature-list-item">
                 <div class="about-icon-wrap">
                   <div class="about-feature-icon-bg"></div>
@@ -1925,7 +1942,7 @@
           >
             <div class="footer-logo-area">
               <a
-                href="index.html"
+                href="/"
                 aria-current="page"
                 class="brand-link w-nav-brand w--current"
                
@@ -2051,7 +2068,7 @@
                     <div class="footer-contact-content-area">
                       <p class="footer-contact-title">ADDRESS:</p>
                       <p class="footer-contact-content">
-                        Nairobi, Kenya
+                          Maralal, Kenya
                       </p>
                     </div>
                   </div>

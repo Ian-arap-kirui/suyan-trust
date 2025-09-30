@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Test</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.5;
+      }
+      #events .event {
+        border: 1px solid #ccc;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        background: #f9f9f9;
+      }
+      #eventForm {
+        margin-top: 30px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        background: #f0f8ff;
+        border-radius: 6px;
+      }
+      #eventForm input,
+      #eventForm textarea,
+      #eventForm button {
+        display: block;
+        margin-bottom: 10px;
+        padding: 8px;
+        width: 100%;
+        max-width: 400px;
+      }
+      #response {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upcoming Events</h1>
+    <div id="events">Loading events...</div>
+
+    <h2>Admin: Add New Event</h2>
+    <form id="eventForm">
+      <input type="date" name="date" required />
+      <input type="text" name="title" placeholder="Title" required />
+      <input type="text" name="organizer" placeholder="Organizer" required />
+      <input type="text" name="location" placeholder="Location" required />
+      <input type="time" name="time" required />
+      <textarea
+        name="activities"
+        placeholder="Activities and Highlights"
+      ></textarea>
+
+      <!-- Admin secret key -->
+      <input
+        type="password"
+        name="secret"
+        placeholder="Admin Key"
+        required
+      />
+
+      <button type="submit">Submit Event</button>
+    </form>
+    <div id="response"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // 🔗 Your published Google Sheet CSV (read-only)
+      const sheetUrl =
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vSszMEHR-NjvitoGQGf0hQBh5XJAxTCa0pAx0zW0OsliKMaHTQpP6dR_6LxBoDRF3ZIrXaOqIaLkP_I/pub?output=csv";
+
+      // 🔗 Your deployed Apps Script Web App URL (write access)
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxxHYnTTIjs1ji30-w8hZ7CorloC20xQ6a43O_H-nQnLp8-s25TTb1can5YrqQcUYSiBg/exec"; // <-- replace with your Apps Script Web App link
+
+      // 📖 Fetch & render events
+      function loadEvents() {
+        $.ajax({
+          url: sheetUrl,
+          dataType: "text",
+          success: function (data) {
+            let rows = data.split("\n").map((r) => r.split(","));
+            let headers = rows[0]; // Event Date | Title | Event Organizer | Event Location | Event Time | Activities and Highlights
+            $("#events").empty();
+
+            if (rows.length <= 1) {
+              $("#events").text("No events found.");
+              return;
+            }
+
+            rows.slice(1).forEach((r) => {
+              if (r.length >= 6) {
+                $("#events").append(`
+                  <div class="event">
+                    <h3>${r[1]}</h3>
+                    <p><strong>Date:</strong> ${r[0]}</p>
+                    <p><strong>Organizer:</strong> ${r[2]}</p>
+                    <p><strong>Location:</strong> ${r[3]}</p>
+                    <p><strong>Time:</strong> ${r[4]}</p>
+                    <p>${r[5]}</p>
+                  </div>
+                `);
+              }
+            });
+          },
+          error: function () {
+            $("#events").text("❌ Failed to load events.");
+          },
+        });
+      }
+
+      // ✍️ Submit new event (admin only)
+      $("#eventForm").on("submit", function (e) {
+        e.preventDefault();
+
+        // Map HTML form fields → Apps Script expected keys
+        const formData = {
+          "Event Date": $("input[name=Date]").val(),
+          "Title": $("input[name=Title]").val(),
+          "Event Organizer": $("input[name=Organizer]").val(),
+          "Event Location": $("input[name=Location]").val(),
+          "Event Time": $("input[name=Time]").val(),
+          "Activities and Highlights": $("textarea[name=Activities]").val(),
+          secret: $("input[name=secret]").val(),
+        };
+
+        $.ajax({
+          url: scriptURL,
+          method: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(formData),
+          success: function (res) {
+            let msg = "";
+            try {
+              const parsed = JSON.parse(res);
+              msg =
+                parsed.result === "success"
+                  ? "✅ Event submitted successfully!"
+                  : "❌ " + parsed.message;
+            } catch {
+              msg = "✅ Event submitted!";
+            }
+            $("#response").text(msg);
+            $("#eventForm")[0].reset();
+            loadEvents(); // refresh events after adding
+          },
+          error: function (err) {
+            $("#response").text("❌ Error submitting event.");
+            console.error(err);
+          },
+        });
+      });
+
+      // Load events on page load
+      $(document).ready(loadEvents);
+    </script>
+  </body>
+</html>
